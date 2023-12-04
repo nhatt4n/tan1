@@ -1,0 +1,19 @@
+local invent_table = {}
+
+for i,v in next, game:GetService("ReplicatedStorage").Profiles[game.Players.LocalPlayer.Name].Inventory:GetChildren() do 
+    
+        invent_table[v.Name] = 0
+    end
+
+
+for i,v in next, game:GetService("ReplicatedStorage").Profiles[game.Players.LocalPlayer.Name].Inventory:GetChildren() do
+   
+        invent_table[v.Name] = invent_table[v.Name] + 1
+ 
+end
+
+
+
+for i,v in pairs(invent_table) do print(i..":"..v)
+
+end
